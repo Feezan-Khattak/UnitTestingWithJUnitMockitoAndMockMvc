@@ -4,13 +4,13 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CalculatorTest {
+class AddTest {
 
-    Calculator calculator;
+    Add add;
 
     @BeforeEach
     void setupBeforeEach() {
-        calculator = new Calculator();
+        add = new Add();
         System.out.println("Before each method called");
     }
 
@@ -30,13 +30,14 @@ class CalculatorTest {
     }
 
     @Test
+    @DisplayName("Given two number from client and check its availability")
     void addTwoNumber_ShouldBeEqualOrUnEqual() {
         // setup
         int expected = 7;
         int unexpected = 8;
 
         // execute
-        int result = calculator.add(3, 4);
+        int result = add.add(3, 4);
 
         // assert
         assertEquals(expected, result, "3+4 should be 7");
