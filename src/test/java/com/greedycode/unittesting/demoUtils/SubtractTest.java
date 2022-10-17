@@ -14,7 +14,7 @@ class SubtractTest {
     @BeforeEach
     void setupBeforeEach(){
         subtract = new Subtract();
-    }`
+    }
 
     @Test
     void givenTwoNumber_checkEqualAndNotEqual(){
